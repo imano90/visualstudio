@@ -1,0 +1,80 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Showcase</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Prevents scrollbars during animation */
+        }
+
+        #main-container {
+            text-align: center;
+            opacity: 0; /* Starting point for JS animation */
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            color: #0078d4;
+        }
+
+        iframe {
+            border: 2px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-container">
+        <h1>Welcome to My Project</h1>
+        <p>A showcase of embedded media and JavaScript animation.</p>
+
+        <div class="video-container">
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Animation Logic
+        window.onload = function() {
+            let container = document.getElementById("main-container");
+            let opacity = 0;
+            let position = 50; // Starting 50px lower
+
+            let animation = setInterval(function() {
+                if (opacity >= 1) {
+                    clearInterval(animation);
+                } else {
+                    opacity += 0.02; // Increase visibility
+                    position -= 1; // Move up
+                    container.style.opacity = opacity;
+                    container.style.marginTop = position + "px";
+                }
+            }, 20); // Runs every 20ms for smooth motion
+        };
+    </script>
+</body>
+</html>
+
+Attachments area
+Preview YouTube video Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)Preview YouTube video Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)
+
